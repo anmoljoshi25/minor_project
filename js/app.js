@@ -98,6 +98,9 @@ const add_in_cart = (item) => {
   })
 };
 
+
+
+
 // GET product
 
 async function getProducts(parentElement) {
@@ -152,6 +155,21 @@ async function addingItems(parentElement) {
 
 addingItems(top_Product_Shelf);
 
+const displayPaymentFailedAlert = () => {
+  alert("Payment failed. Please try again or contact customer support.");
+};
+
+
+const paymentButton = document.querySelector(".buy-items-from-cart");
+
+paymentButton.addEventListener("click", () => {
+ 
+  displayPaymentFailedAlert();
+});
+
+
+
+
 
 
   // gsap-start
@@ -183,4 +201,11 @@ addingItems(top_Product_Shelf);
       duration: 1,
       stagger: 0.3
   })
+  
+
+
+
+
+
+
   
